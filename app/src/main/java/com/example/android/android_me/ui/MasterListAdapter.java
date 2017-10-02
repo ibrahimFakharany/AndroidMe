@@ -20,7 +20,6 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
 
 import java.util.List;
@@ -72,10 +71,10 @@ public class MasterListAdapter extends BaseAdapter {
             imageView.setAdjustViewBounds(true);
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             imageView.setPadding(8, 8, 8, 8);
-        } else {
-            imageView = (ImageView) convertView;
-        }
 
+        } else {
+           imageView = (ImageView) convertView;
+        }
         // Set the image resource and return the newly created ImageView
         imageView.setImageResource(mImageIds.get(position));
         return imageView;
